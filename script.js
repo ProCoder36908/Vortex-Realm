@@ -296,6 +296,9 @@ const games = [
 function createGameCards() {
     const container = document.getElementById('game-cards');
     games.forEach(game => {
+        const cardContainer = document.createElement('div');
+        cardContainer.className = 'card-container';
+
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
@@ -304,7 +307,8 @@ function createGameCards() {
                 <br>${game}
             </a>
         `;
-        container.appendChild(card);
+        cardContainer.appendChild(card);
+        container.appendChild(cardContainer);
     });
 }
 
