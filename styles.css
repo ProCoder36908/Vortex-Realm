@@ -1,51 +1,12 @@
-/* styles.css */
-
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
-.game-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.game-link {
+  .card {
+    display: inline-block;
+    margin: 10px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.game-link:hover {
-    transform: translateY(-5px);
-}
-
-.game-link a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.game-link img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ccc;
-}
-
-.game-link p {
     padding: 10px;
     text-align: center;
-    font-weight: bold;
-}
+    width: 120px;
+  }
+  .card img {
+    width: 100px;
+    height: 100px;
+  }
