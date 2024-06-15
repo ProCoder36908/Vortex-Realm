@@ -236,7 +236,6 @@ const games = [
     "minecrafttowerdefence",
     "minesweeper",
     "miniputt",
-    "missiles
     "miniputt",
     "missiles",
     "monster-tracks",
