@@ -1,4 +1,4 @@
-  const games = [
+const games = [
     "1",
     "10-minutes-till-dawn",
     "100ng",
@@ -291,21 +291,22 @@
     "roblox",
     "robux",
 ];
-  // Function to create game cards
-  function createGameCards() {
+
+// Function to create game cards
+function createGameCards() {
     const container = document.getElementById('game-cards');
     games.forEach(game => {
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.innerHTML = `
-        <a href="/games/${game}" class="${game}-link" onclick="pool()">
-          <img src="images/${game}.png" alt="${game}" title="${game}" />
-          <br>${game}
-        </a>
-      `;
-      container.appendChild(card);
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <a href="/games/${game}" class="${game}-link" onclick="pool()">
+                <img src="images/${game}.png" alt="${game}" title="${game}" />
+                <br>${game}
+            </a>
+        `;
+        container.appendChild(card);
     });
-  }
+}
 
-  // Call the function to create cards when the page loads
-  window.onload = createGameCards;
+// Call the function to create cards when the page loads
+window.onload = createGameCards;
