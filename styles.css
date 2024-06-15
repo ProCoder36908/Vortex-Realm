@@ -1,13 +1,43 @@
+body {
+    background-color: black;
+    color: white; /* Optional: To ensure text is visible on a black background */
+}
+
 .card {
-    border: 2px solid;
-    border-image: linear-gradient(to right, blue, purple) 1;
-    border-radius: 8px;
+    border: 3px solid transparent;
+    border-radius: 12px; /* Making the cards slightly more rounded */
     padding: 16px;
     margin: 10px;
     width: 150px;
     text-align: center;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 0;
+    overflow: hidden; /* To contain the pseudo-elements */
+}
+
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(45deg, blue, purple, blue, purple);
+    background-size: 200% 200%;
+    z-index: -1;
+    animation: borderAnimation 5s linear infinite;
+}
+
+.card::before {
+    filter: blur(4px);
+}
+
+.card::after {
+    filter: blur(8px);
+    opacity: 0.6;
 }
 
 .card:hover {
@@ -19,4 +49,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+@keyframes borderAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
