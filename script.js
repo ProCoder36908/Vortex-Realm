@@ -236,6 +236,8 @@ const games = [
     "minecrafttowerdefence",
     "minesweeper",
     "miniputt",
+    "missiles
+    "miniputt",
     "missiles",
     "monster-tracks",
     "motox3m-pool",
@@ -312,5 +314,5 @@ function createGameCards() {
     });
 }
 
-// Call the function to create cards when the page loads
-window.onload = createGameCards;
+// Call the function to create game cards when the DOM content is loaded
+document.addEventListener('DOMContentLoaded', createGameCards);
