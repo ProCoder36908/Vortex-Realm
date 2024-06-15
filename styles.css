@@ -1,6 +1,7 @@
+/* General styles */
 body {
     background-color: black;
-    color: white; /* Optional: To ensure text is visible on a black background */
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,24 +9,27 @@ body {
     margin: 0;
 }
 
+/* Card container styles */
 .card-container {
     position: relative;
     margin: 10px;
     width: 150px;
-    border-radius: 12px; /* Make the cards slightly more rounded */
-    overflow: hidden; /* To contain the pseudo-elements */
+    border-radius: 12px;
+    overflow: hidden;
 }
 
+/* Card styles */
 .card {
-    border-radius: 12px; /* Make the cards slightly more rounded */
+    border-radius: 12px;
     padding: 16px;
-    background-color: white; /* Background color of the card */
+    background-color: white;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     z-index: 1;
     position: relative;
 }
 
+/* Pseudo-element styles for the card container */
 .card-container::before,
 .card-container::after {
     content: '';
@@ -49,17 +53,20 @@ body {
     opacity: 0.6;
 }
 
+/* Hover effect on cards */
 .card-container:hover .card {
     transform: scale(1.05);
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Game cards container */
 #game-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* Animation keyframes */
 @keyframes borderAnimation {
     0% {
         background-position: 0% 50%;
