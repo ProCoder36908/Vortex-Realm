@@ -1,6 +1,11 @@
 body {
     background-color: black;
     color: white; /* Optional: To ensure text is visible on a black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .card-container {
@@ -27,12 +32,12 @@ body {
     position: absolute;
     top: -2px;
     left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
+    right: -2px;
+    bottom: -2px;
     background: linear-gradient(45deg, blue, purple, blue, purple);
-    background-size: 200% 200%;
+    background-size: 400% 400%;
     z-index: -1;
-    animation: borderAnimation 5s linear infinite;
+    animation: borderAnimation 10s linear infinite;
 }
 
 .card-container::before {
