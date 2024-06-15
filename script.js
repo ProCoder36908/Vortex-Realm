@@ -316,3 +316,11 @@ function createGameCards() {
 
 // Call the function to create game cards when the DOM content is loaded
 document.addEventListener('DOMContentLoaded', createGameCards);
+
+// Example function (replace with actual function definition if needed)
+function pool() {
+    console.log('Pool function executed.');
+}
+
+// Example of other JavaScript code (add your own as needed)
+console.log('Additional JavaScript code here...');
